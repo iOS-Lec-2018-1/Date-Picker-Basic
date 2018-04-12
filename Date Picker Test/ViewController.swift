@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         // dateFormat
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd HH:mm:ss EE"
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         timeLabel.text = formatter.string(from: myDatePicker.date)
         
     }
