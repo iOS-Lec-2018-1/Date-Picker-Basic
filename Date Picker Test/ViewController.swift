@@ -19,11 +19,11 @@ class ViewController: UIViewController {
 
     @IBAction func changeDatePicker(_ sender: Any) {
         print("change Date Picker")
-//        print(myDatePicker.date)
+        print(myDatePicker.date)
         
         // dateFormat
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss a EE"
+        formatter.dateFormat = "MM-dd HH:mm:ss EE"
         timeLabel.text = formatter.string(from: myDatePicker.date)
         
 //        timeLabel.text = String(describing: myDatePicker.date)
