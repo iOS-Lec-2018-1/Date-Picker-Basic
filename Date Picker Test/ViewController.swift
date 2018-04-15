@@ -54,6 +54,5 @@ class ViewController: UIViewController {
     @IBAction func stopAlert(_ sender: Any) {
         view.backgroundColor = UIColor.white
     }
-    
 }
 
