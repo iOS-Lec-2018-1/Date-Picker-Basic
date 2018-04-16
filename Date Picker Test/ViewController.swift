@@ -40,9 +40,14 @@ class ViewController: UIViewController {
             // Alert
             let timeAlert = UIAlertController(title: "알림", message: "설정된 시간입니다!!!", preferredStyle: .alert)
 //            let okAction = UIAlertAction(title: "네", style: .default, handler: nil)
-            let okAction = UIAlertAction(title: "네", style: .default, handler: { (UIAlertAction) -> Void in
-                    self.view.backgroundColor = UIColor.white
-                })
+//            let okAction = UIAlertAction(title: "네", style: .default, handler: { (action:UIAlertAction) -> Void in
+//                    self.view.backgroundColor = UIColor.white
+//                })
+            
+            let okAction = UIAlertAction(title: "네", style: .default) {
+                (action:UIAlertAction) -> Void in
+                self.view.backgroundColor = UIColor.white
+                }
             
             let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
             timeAlert.addAction(okAction)
@@ -57,12 +62,6 @@ class ViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         timeLabel.text = formatter.string(from: myDatePicker.date)
-        
     }
-    
-    @IBAction func stopAlert(_ sender: Any) {
-        view.backgroundColor = UIColor.white
-    }
-    
 }
 
