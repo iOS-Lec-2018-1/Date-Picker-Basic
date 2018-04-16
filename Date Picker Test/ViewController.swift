@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         // initial Picker Time setting
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "hh:mm:ss"
         timeLabel.text = formatter.string(from: myDatePicker.date)
         
         myTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {(myTimer) in
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     func updateTime() {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "hh:mm:ss"
         currentTimeLabel.text = formatter.string(from: date)
         
         if currentTimeLabel.text == timeLabel.text {
@@ -45,8 +45,7 @@ class ViewController: UIViewController {
         
         // dateFormat
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM-dd HH:mm:ss EE"
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "hh:mm:ss"
         timeLabel.text = formatter.string(from: myDatePicker.date)
         
     }
